@@ -1,0 +1,39 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="26" fill="#003554"/>
+
+  <!-- Subtle inner glow ring -->
+  <rect x="1" y="1" width="126" height="126" rx="25.5" stroke="#004E7C" stroke-width="2"/>
+
+  <!-- Top-left focus bracket -->
+  <path d="M18 40 L18 18 L40 18" stroke="#00C2FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Top-right focus bracket -->
+  <path d="M88 18 L110 18 L110 40" stroke="#00C2FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Bottom-left focus bracket -->
+  <path d="M18 88 L18 110 L40 110" stroke="#00C2FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Bottom-right focus bracket -->
+  <path d="M88 110 L110 110 L110 88" stroke="#00C2FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Subtle crosshair lines (vertical) -->
+  <line x1="64" y1="28" x2="64" y2="46" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <line x1="64" y1="82" x2="64" y2="100" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Subtle crosshair lines (horizontal) -->
+  <line x1="28" y1="64" x2="46" y2="64" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <line x1="82" y1="64" x2="100" y2="64" stroke="#00C2FF" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Outer target ring -->
+  <circle cx="64" cy="64" r="18" stroke="#00C2FF" stroke-width="2" fill="none" opacity="0.55"/>
+
+  <!-- Inner target ring -->
+  <circle cx="64" cy="64" r="10" stroke="#00C2FF" stroke-width="2" fill="none" opacity="0.85"/>
+
+  <!-- Center dot -->
+  <circle cx="64" cy="64" r="4.5" fill="#00C2FF"/>
+
+  <!-- Center dot highlight -->
+  <circle cx="62.5" cy="62.5" r="1.5" fill="white" opacity="0.7"/>
+</svg>

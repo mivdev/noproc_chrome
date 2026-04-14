@@ -1,0 +1,255 @@
+:root {
+  --iv-blue-dark: #003554;
+  --iv-blue-primary: #004E7C;
+  --iv-cyan: #00C2FF;
+  --iv-white: #FFFFFF;
+  --iv-gray-light: #F4F7F9;
+  --iv-gray-text: #6B7280;
+}
+
+body {
+  width: 340px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--iv-gray-light);
+  margin: 0;
+  color: var(--iv-blue-dark);
+}
+
+.container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 78, 124, 0.1);
+  padding-bottom: 12px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--iv-blue-dark);
+}
+
+.tagline {
+  font-size: 10px;
+  color: var(--iv-cyan);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 4px 0 0 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--iv-blue-primary);
+  letter-spacing: 0.5px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--iv-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.1);
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+.timer-card {
+  text-align: center;
+  padding: 20px;
+  background: var(--iv-blue-dark);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 53, 84, 0.2);
+  margin-bottom: 8px;
+}
+
+.timer-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--iv-cyan);
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.timer-display {
+  font-size: 56px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--iv-white);
+}
+
+#status-text {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.status-inactive { color: rgba(255,255,255,0.4); }
+.status-active { color: var(--iv-white); opacity: 0.8; }
+
+.stats-card {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 53, 84, 0.05);
+}
+
+.stats-card h3 {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--iv-blue-primary);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+}
+
+.chart-container {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ideal-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1.5px dashed rgba(239, 68, 68, 0.4);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.ideal-line span {
+  font-size: 8px;
+  font-weight: 800;
+  color: rgba(239, 68, 68, 0.6);
+  background: white;
+  padding: 0 4px;
+  margin-left: -4px;
+}
+
+.stats-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  gap: 8px;
+  padding-bottom: 4px;
+  z-index: 5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn-link {
+  background: transparent;
+  color: var(--iv-gray-text);
+  font-size: 10px;
+  padding: 4px 0;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+
+.btn-link:hover {
+  color: var(--iv-blue-primary);
+}
+
+.config-toggle-container {
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: var(--iv-cyan);
+  color: var(--iv-blue-dark);
+}
+
+.btn-primary:hover {
+  background-color: #00A3D7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 194, 255, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--iv-blue-primary);
+  border: 2px solid rgba(0, 78, 124, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 78, 124, 0.05);
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer a {
+  font-size: 11px;
+  color: var(--iv-gray-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: var(--iv-blue-primary);
+}
