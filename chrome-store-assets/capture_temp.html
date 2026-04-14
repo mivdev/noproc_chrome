@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoProc - InfoVita</title>
+  <script src="chrome-store-assets/debug_mock.js"></script>
+  <link rel="stylesheet" href="../noproc_extension/popup.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1280px;
+      height: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #004E7C 0%, #003554 100%);
+      overflow: hidden;
+    }
+    .capture-stage {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="capture-stage">
+    <div class="container">
+    <header>
+      <div class="timer-card">
+        <small class="timer-label">TIEMPO ENFOCADO</small>
+        <div id="display" class="timer-display">00:00</div>
+        <div id="status-text" class="status-inactive">MODO ESPERA</div>
+      </div>
+    </header>
+
+    <main>
+      <div id="pin-hint" class="pin-hint hidden">
+        <span>📌 <strong>Tip:</strong> Fija NoProc en tu barra para acceso rápido.</span>
+        <button id="closePinHint" class="close-hint">×</button>
+      </div>
+
+      <div id="blacklist-config" class="hidden">
+        <div class="input-group">
+          <label for="blacklist">DOMINIOS RESTRINGIDOS</label>
+          <textarea id="blacklist" placeholder="Ej: youtube.com, x.com"></textarea>
+        </div>
+      </div>
+      
+      <div class="config-toggle-container">
+        <button id="toggleBlacklist" class="btn-link">⚙️ CONFIGURAR SITIOS BLOQUEADOS</button>
+      </div>
+
+      <div class="stats-card">
+        <h3>REPORTE SEMANAL</h3>
+        <div class="chart-container">
+          <div id="ideal-line" class="ideal-line"><span>6H META</span></div>
+          <div id="stats-chart" class="stats-chart"></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="btn-primary">ACTIVAR ESCUDO</button>
+        <button id="stopBtn" class="btn-secondary hidden">DETENER SESIÓN</button>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://infovita.com.ar" target="_blank">Desarrollado por InfoVita</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

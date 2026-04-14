@@ -1,12 +1,20 @@
 {
   "manifest_version": 3,
   "name": "NoProc - Enfoque Total",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Domina tu enfoque. Bloquea distracciones.",
   "author": "InfoVita (infovita.com.ar)",
   "homepage_url": "https://infovita.com.ar",
-  "permissions": ["storage", "alarms", "notifications", "scripting", "tabs"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -25,9 +33,16 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["content.css"]
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
     }
   ]
 }
